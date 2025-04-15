@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    background: lightskyblue;
 }
 nav {
     display: flex;
@@ -25,9 +26,14 @@ header {
 #presentation {
     display: flex;
     flex-direction: column;
+    width: 20%;
 }
 header .image {
     display: flex;
-    width: 50px;
-    height: 50px;
+    width: 30%;
+    height: 50%;
+}
+header #reseaux .insta {
+    display: flex;
+    width: 30%;
 }
