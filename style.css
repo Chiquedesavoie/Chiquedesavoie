@@ -3,6 +3,8 @@ body {
     margin: 0;
     background: lightskyblue;
     transition: background 1s ease-out;
+    color: white;
+   
 }
 
 body:hover {
@@ -52,6 +54,11 @@ header {
     justify-content: center;
     align-items: center;
 }
+header a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
 #presentation {
     display: flex;
     flex-direction: column;
@@ -73,6 +80,9 @@ main {
     height: fit-content;
     display: flex;
     flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 main #projet .cartes{
     display: flex;
@@ -86,6 +96,8 @@ main #projet .cartes{
     padding: 8px 16px;
     font-weight: 500;
    transition: all .5s ease-in-out;
+   perspective:  1000px;
+   margin: 20px;
     
 }
 
@@ -94,11 +106,19 @@ main #projet .cartes{
    color: black;
    flex-direction: column;
    align-items: center;
-   gap: 40px;
+   gap: 70px;
    border-radius: 20px;
    padding: 0px;
-   width: 20%;
+   width: 40%;
    flex-wrap: wrap;
+   position: relative;
+   transform-style: preserve-3d;
+   transition: preserve 0.6s;
+   cursor: pointer;
+}
+
+.carte {
+    transform: rotateY('180deg');
 }
 .carte p {
     display: flex;
@@ -114,7 +134,7 @@ main #projet .cartes{
 .carte:hover {
     transform: scale(1.2);
 }
-.carte{
+/*.carte{
     animation: carte 1s infinite alternate-reverse;
 }
 .carte:hover {
@@ -133,7 +153,7 @@ main #projet .cartes{
        
         translate: 250px -250px;
     }
-}
+}*/
 
 .secondaire {
     display: flex;
@@ -166,9 +186,19 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: red;
+    background: gray;
     padding: 32px;
+    transition: background 1s ease-out;
 }
+footer:hover {
+    background: lightskyblue ;
+    }
+footer a {
+        display: flex;
+        text-decoration: none;
+        color: white;
+    }
+
 .lien {
     display: flex;
     align-items: center;
